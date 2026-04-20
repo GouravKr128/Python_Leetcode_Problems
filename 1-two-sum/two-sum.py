@@ -1,4 +1,4 @@
-## Time Complexity -> O(n)
+## Time Complexity -> O(n2)
 class Solution(object):
     def twoSum(self, nums, target):
         for i in range(len(nums)):

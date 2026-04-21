@@ -1,5 +1,5 @@
 # Time Complexity -> O(nxm)
-# n -> lenghth on strs
+# n -> lenghth of strs
 # m -> length of shortest string
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
@@ -15,7 +15,7 @@ class Solution:
 
         # Create dictionary: Key -> index; value -> character
         d={ i:min_str[i] for i in range(len(min_str))}
-        
+
         # Vertical Scanning
         flag = True
         for i in d:

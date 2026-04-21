@@ -1,3 +1,6 @@
+# Time Complexity -> O(nxm)
+# n -> lenghth on strs
+# m -> length of shortest string
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         output = ""

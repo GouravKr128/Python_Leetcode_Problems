@@ -4,6 +4,7 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         output = ""
+        
         # Find shortest length string(base string)
         indx=0
         min_len = len(strs[0])

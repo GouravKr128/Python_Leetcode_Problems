@@ -12,8 +12,10 @@ class Solution:
                 min_len = len(strs[i])
                 indx = i
         min_str = strs[indx]
+
         # Create dictionary: Key -> index; value -> character
         d={ i:min_str[i] for i in range(len(min_str))}
+        
         # Vertical Scanning
         flag = True
         for i in d:

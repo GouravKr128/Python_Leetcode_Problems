@@ -4,6 +4,7 @@
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         output = ""
+        # Find shortest length string(base string)
         indx=0
         min_len = len(strs[0])
         for i in range(len(strs)):
@@ -11,7 +12,9 @@ class Solution:
                 min_len = len(strs[i])
                 indx = i
         min_str = strs[indx]
+        # Create dictionary: Key -> index; value -> character
         d={ i:min_str[i] for i in range(len(min_str))}
+        # Vertical Scanning
         flag = True
         for i in d:
             for s in strs:

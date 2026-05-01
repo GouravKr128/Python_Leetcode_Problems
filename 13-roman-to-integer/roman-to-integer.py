@@ -1,4 +1,29 @@
 ## Time complexity -> O(n) 
+
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        d={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500, "M":1000 }
+        if len(s)==0:
+            return 0
+        if len(s)==1:
+            return d[s]
+        sum=0
+        i=0
+        while True:
+            if d[s[i]]>=d[s[i+1]]:
+                sum = sum + d[s[i]]
+                i+=1
+            else:
+                sum = sum + d[s[i]]*(-1)
+                i+=1
+            if i==(len(s)-1):
+                sum=sum+d[s[i]]
+                break
+       
+        return sum
+
+
+"""
 class Solution:
     def romanToInt(self, s: str) -> int:
         d={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500, "M":1000 }
@@ -25,4 +50,4 @@ class Solution:
             sum=sum+d[i]
         
         return sum
-        
+"""       
